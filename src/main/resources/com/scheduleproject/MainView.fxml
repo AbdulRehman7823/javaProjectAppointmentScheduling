@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="662.0" prefWidth="1104.0"
+            style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/18"
+            fx:controller="com.scheduleproject.controller.MainViewController">
+    <children>
+        <Label layoutX="413.0" layoutY="14.0" text="Appointment Schedules" textFill="#060890" underline="true">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Label>
+        <HBox layoutX="126.0" layoutY="73.0" prefHeight="35.0" prefWidth="845.0" spacing="50.0">
+            <children>
+                <RadioButton fx:id="viewCustomerBtn" mnemonicParsing="false" onAction="#viewCustomerBtnAction"
+                             text="View Customers" textFill="#060890">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="tg"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="viewByWeekBtn" mnemonicParsing="false" onAction="#viewByWeekBtnAction"
+                             text="View By Week" textFill="#060890" toggleGroup="$tg">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="viewByMonthBtn" mnemonicParsing="false" onAction="#viewByMonthBtnAction"
+                             text="View By Month" textFill="#060890" toggleGroup="$tg">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="viewAllBtn" mnemonicParsing="false" onAction="#viewAllBtnAction" text="View All"
+                             textFill="#060890" toggleGroup="$tg">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </RadioButton>
+                <DatePicker fx:id="mainDatePicker" onAction="#mainDatePickerAction" prefHeight="30.0"
+                            prefWidth="174.0"/>
+            </children>
+        </HBox>
+        <AnchorPane fx:id="mainViewPane" layoutX="6.0" layoutY="118.0" prefHeight="536.0" prefWidth="1088.0"/>
+    </children>
+</AnchorPane>

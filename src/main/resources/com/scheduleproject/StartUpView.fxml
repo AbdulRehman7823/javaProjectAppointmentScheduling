@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="417.0" prefWidth="602.0" style="-fx-background-color: #ffff;"
+            xmlns="http://javafx.com/javafx/18" fx:controller="com.scheduleproject.controller.StartUpController">
+    <children>
+        <Label layoutX="116.0" layoutY="14.0" text="Appointment Management System" textAlignment="CENTER"
+               textFill="#060890" underline="true">
+            <font>
+                <Font name="System Bold Italic" size="24.0"/>
+            </font>
+        </Label>
+        <HBox layoutX="88.0" layoutY="99.0" prefHeight="110.0" prefWidth="445.0">
+            <children>
+                <VBox prefHeight="110.0" prefWidth="133.0" spacing="30.0">
+                    <children>
+                        <Label text="User Name" textFill="#060890">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Password" textFill="#060890">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label textFill="#060890">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Language" textFill="#060890">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Time Zone" textFill="#060890">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="103.0" prefWidth="231.0" spacing="20.0">
+                    <children>
+                        <TextField fx:id="userNameTf" prefHeight="35.0" prefWidth="100.0" promptText="User Name"/>
+                        <PasswordField fx:id="passwordTf" prefHeight="35.0" prefWidth="231.0" promptText="Password"/>
+                        <HBox prefHeight="35.0" prefWidth="200.0" spacing="30.0">
+                            <children>
+                                <Button fx:id="loginBtn" alignment="CENTER" contentDisplay="CENTER"
+                                        mnemonicParsing="false" onAction="#loginBtnAction" prefHeight="30.0"
+                                        prefWidth="137.0" style="-fx-background-color: #060890;" text="Login"
+                                        textFill="WHITE">
+                                    <font>
+                                        <Font name="System Italic" size="14.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                    <effect>
+                                        <DropShadow>
+                                            <color>
+                                                <Color red="0.17129629850387573" green="0.42538580298423767"
+                                                       blue="0.9736841917037964"/>
+                                            </color>
+                                        </DropShadow>
+                                    </effect>
+                                </Button>
+                                <Button fx:id="resetBtn" alignment="CENTER" contentDisplay="CENTER"
+                                        mnemonicParsing="false" onAction="#resetBtnAction" prefHeight="25.0"
+                                        prefWidth="65.0" style="-fx-background-color: #060890;" text="Reset"
+                                        textFill="WHITE">
+                                    <font>
+                                        <Font name="System Italic" size="14.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                    <effect>
+                                        <DropShadow>
+                                            <color>
+                                                <Color red="0.17129629850387573" green="0.42538580298423767"
+                                                       blue="0.9736841917037964"/>
+                                            </color>
+                                        </DropShadow>
+                                    </effect>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <ComboBox fx:id="languageComboBox" onAction="#languageComboBoxAction" prefHeight="38.0"
+                                  prefWidth="231.0" promptText="Select Languauge"/>
+                        <Label fx:id="timeZoneL" text="Time Zone" textFill="#060890" underline="true">
+                            <font>
+                                <Font name="System Bold Italic" size="18.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Label fx:id="errorLabel" layoutX="222.0" layoutY="360.0" prefHeight="17.0" prefWidth="240.0" textFill="RED"/>
+    </children>
+</AnchorPane>

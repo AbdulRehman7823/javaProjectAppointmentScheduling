@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="603.0" prefWidth="832.0"
+            style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/18"
+            fx:controller="com.scheduleproject.controller.AddAppointmentViewController">
+    <children>
+        <Label layoutX="324.0" layoutY="14.0" text="Add Appointment" textFill="#060890" underline="true">
+            <font>
+                <Font name="System Bold Italic" size="24.0"/>
+            </font>
+        </Label>
+        <HBox layoutX="42.0" layoutY="84.0" prefHeight="445.0" prefWidth="789.0" spacing="30.0">
+            <children>
+                <VBox prefHeight="362.0" prefWidth="122.0" spacing="30.0">
+                    <children>
+                        <Label text="Appointment ID" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Title" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Description" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Location" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Type" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Contact ID" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Customer ID" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="User ID" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox prefHeight="362.0" prefWidth="242.0" spacing="2.0">
+                    <children>
+                        <TextField fx:id="idTf" prefHeight="35.0" prefWidth="238.0" promptText="Appointment ID"/>
+                        <Label prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="titleTf" prefHeight="35.0" prefWidth="238.0" promptText="Appointment Title"/>
+                        <Label fx:id="titleErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="descriptionTf" prefHeight="35.0" prefWidth="238.0" promptText="Description"/>
+                        <Label fx:id="descErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="locationTf" prefHeight="35.0" prefWidth="238.0" promptText="Location"/>
+                        <Label fx:id="locationErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="typeTf" prefHeight="35.0" prefWidth="238.0" promptText="Type"/>
+                        <Label fx:id="typeErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="contactComboBox" prefHeight="36.0" prefWidth="242.0" promptText="Contact ID"/>
+                        <Label fx:id="contactErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="customerIdComboBox" prefHeight="36.0" prefWidth="242.0"
+                                  promptText="Customer ID"/>
+                        <Label fx:id="CustomerErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="userIdComboBox" prefHeight="36.0" prefWidth="242.0" promptText="User ID"/>
+                        <Label fx:id="userErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <Separator orientation="VERTICAL" prefHeight="200.0"/>
+                <VBox prefHeight="362.0" prefWidth="95.0" spacing="30.0">
+                    <children>
+                        <Label text="Start Date" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Start Time" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="End Date" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                        <Label text="End Time" textFill="#060890">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox prefHeight="386.0" prefWidth="199.0" spacing="2.0">
+                    <children>
+                        <DatePicker fx:id="startDateTf" prefHeight="35.0" prefWidth="185.0" promptText="Start Date"/>
+                        <Label fx:id="stDateErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <HBox prefHeight="35.0" prefWidth="178.0" spacing="2.0">
+                            <children>
+                                <Spinner fx:id="startTimeTf1" prefHeight="35.0" prefWidth="89.0">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.IntegerSpinnerValueFactory max="24" min="1"/>
+                                    </valueFactory>
+                                </Spinner>
+                                <Spinner fx:id="startTimeTf2" prefHeight="35.0" prefWidth="89.0">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.IntegerSpinnerValueFactory max="60" min="1"/>
+                                    </valueFactory>
+                                </Spinner>
+                            </children>
+                        </HBox>
+                        <Label fx:id="stTimeErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="endDateTf" prefHeight="35.0" prefWidth="184.0" promptText="End Date"/>
+                        <Label fx:id="endDateErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <HBox prefHeight="35.0" prefWidth="178.0" spacing="2.0">
+                            <children>
+                                <Spinner fx:id="endTimeTf1" prefHeight="35.0" prefWidth="89.0">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.IntegerSpinnerValueFactory max="24" min="1"/>
+                                    </valueFactory>
+                                </Spinner>
+                                <Spinner fx:id="endTimeTf2" prefHeight="35.0" prefWidth="89.0">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.IntegerSpinnerValueFactory max="60" min="1"/>
+                                    </valueFactory>
+                                </Spinner>
+
+                            </children>
+                        </HBox>
+                        <Label fx:id="endTimeErr" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox layoutX="313.0" layoutY="541.0" prefHeight="45.0" prefWidth="261.0" spacing="50.0">
+            <children>
+                <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveBtnAction" prefHeight="41.0"
+                        prefWidth="105.0" style="-fx-background-color: #060890;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.24074074625968933" green="0.835493803024292" blue="1.0"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelBtnAction" prefHeight="41.0"
+                        prefWidth="105.0" style="-fx-background-color: #060890;" text="Cancel" textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.24074074625968933" green="0.835493803024292" blue="1.0"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

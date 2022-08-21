@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" fx:id="appointmentsPane" prefHeight="490.0"
+            prefWidth="1106.0" xmlns="http://javafx.com/javafx/18"
+            fx:controller="com.scheduleproject.controller.AppointmentViewController">
+    <children>
+        <TableView fx:id="appointmentsTableView" layoutX="9.0" layoutY="2.0" prefHeight="427.0" prefWidth="1097.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="49.0" text="ID"/>
+                <TableColumn fx:id="title" prefWidth="87.0" text="Title"/>
+                <TableColumn fx:id="description" prefWidth="115.0" text="Description"/>
+                <TableColumn fx:id="location" prefWidth="101.0" text="Location"/>
+                <TableColumn fx:id="contact" prefWidth="101.0" text="Contact"/>
+                <TableColumn fx:id="type" prefWidth="101.0" text="Type"/>
+                <TableColumn fx:id="startTime" prefWidth="101.0" text="Start Time"/>
+                <TableColumn fx:id="endTime" prefWidth="101.0" text="End Time "/>
+                <TableColumn fx:id="startDate" prefWidth="101.0" text="Start Date"/>
+                <TableColumn fx:id="endDate" prefWidth="101.0" text="End Date"/>
+                <TableColumn fx:id="customerId" prefWidth="77.0" text="Customer ID"/>
+                <TableColumn fx:id="userId" minWidth="9.0" prefWidth="62.0" text="User ID"/>
+            </columns>
+        </TableView>
+        <HBox fx:id="bottomHBox" layoutX="14.0" layoutY="444.0" prefHeight="40.0" prefWidth="1048.0" spacing="50.0">
+            <children>
+                <Button fx:id="reportBtn" mnemonicParsing="false" onAction="#reportBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Reports" textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="modifyBtn" mnemonicParsing="false" onAction="#modifyBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Modify Appointments"
+                        textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Add Appointments"
+                        textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Delete Appointments"
+                        textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Logout" textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

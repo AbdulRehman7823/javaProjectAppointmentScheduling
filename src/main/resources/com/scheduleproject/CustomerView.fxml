@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" fx:id="customerAnchorPane" prefHeight="490.0"
+            prefWidth="1069.0" xmlns="http://javafx.com/javafx/18"
+            fx:controller="com.scheduleproject.controller.CustomerViewController">
+    <children>
+        <TableView fx:id="customerTableView" layoutX="9.0" layoutY="2.0" prefHeight="436.0" prefWidth="1097.0">
+            <columns>
+                <TableColumn fx:id="customerId" prefWidth="49.0" text="ID"/>
+                <TableColumn fx:id="customerName" prefWidth="120.0" text="Name"/>
+                <TableColumn fx:id="customerAddress" prefWidth="122.0" text="Address"/>
+                <TableColumn fx:id="postalCode" prefWidth="75.0" text="Postal Code"/>
+                <TableColumn fx:id="phoneNumber" prefWidth="131.0" text="Phone Number"/>
+                <TableColumn fx:id="createdDate" prefWidth="120.0" text="Created Date"/>
+                <TableColumn fx:id="createdBy" prefWidth="106.0" text="Created By"/>
+                <TableColumn fx:id="lastUpdate" prefWidth="98.0" text="Last Update"/>
+                <TableColumn fx:id="lastUpdatedBy" minWidth="9.0" prefWidth="120.0" text="Last updated By"/>
+                <TableColumn fx:id="state" minWidth="9.0" prefWidth="155.0" text="State/ Provincce"/>
+            </columns>
+        </TableView>
+        <HBox fx:id="bottomHBox" layoutX="14.0" layoutY="460.0" prefHeight="40.0" prefWidth="1048.0" spacing="50.0">
+            <children>
+                <Button fx:id="reportsBtn" mnemonicParsing="false" onAction="#reportsBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Reports" textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="modify" mnemonicParsing="false" onAction="#modifyAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Modify Customer"
+                        textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Add Customer" textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Delete Customer"
+                        textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutBtnAction" prefHeight="36.0"
+                        prefWidth="170.0" style="-fx-background-color: #060890;" text="Logout" textFill="WHITE">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.22057747840881348" green="0.9342105388641357" blue="0.9342105388641357"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
